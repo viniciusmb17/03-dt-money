@@ -1,4 +1,3 @@
-/* eslint-disable prettier/prettier */
 import styled from 'styled-components'
 import * as Dialog from '@radix-ui/react-dialog'
 import * as RadioGroup from '@radix-ui/react-radio-group'
@@ -81,8 +80,9 @@ interface TransctionTypeButtonProps {
   variant: 'income' | 'outcome'
 }
 
-export const 
-TransctionTypeButton = styled(RadioGroup.Item)<TransctionTypeButtonProps>`
+export const TransctionTypeButton = styled(
+  RadioGroup.Item,
+)<TransctionTypeButtonProps>`
   background: ${(props) => props.theme['gray-700']};
   padding: 1rem;
   display: flex;
@@ -103,16 +103,18 @@ TransctionTypeButton = styled(RadioGroup.Item)<TransctionTypeButtonProps>`
 
   &[data-state='unchecked']:hover {
     transition: background-color 0.2s;
-    background: ${props => props.theme['gray-600']};
+    background: ${(props) => props.theme['gray-600']};
   }
 
   &[data-state='checked'] {
-    color: ${props => props.theme.white};
-    background: ${props => props.variant === 'income' ? props.theme['green-500'] : props.theme['red-500']};
+    color: ${(props) => props.theme.white};
+    background: ${(props) =>
+      props.variant === 'income'
+        ? props.theme['green-500']
+        : props.theme['red-500']};
 
     svg {
-      color: ${props => props.theme.white};
+      color: ${(props) => props.theme.white};
     }
-
   }
 `
