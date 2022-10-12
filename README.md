@@ -4,11 +4,11 @@ This is a project to simulate a simple financial control.
 - Just the layout and some features.
 
 ## In progress
-![](https://us-central1-progress-markdown.cloudfunctions.net/progress/30)
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/35)
 
 ## Demo
 
-[https://coffee-delivery-viniciusmb17.vercel.app](https://03-dt-money-viniciusmb17.vercel.app/)
+[DT Money (demo)](https://03-dt-money-viniciusmb17.vercel.app/)
 
 
 ## Authors
@@ -42,12 +42,24 @@ or
 
 #### Start development environment
 
+#### Front-End:
 ```bash
   yarn dev
 ```
+#### Json-Server:
+```bash
+  yarn dev:server
+```
+
 or
+
+#### Front-End:
 ```bash
   npm run dev
+```
+#### Json-Server:
+```bash
+  npm run dev:server
 ```
 
 
