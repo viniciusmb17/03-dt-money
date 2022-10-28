@@ -4,7 +4,8 @@ This is a project to simulate a simple financial control.
 - Just the layout and some features.
 
 ## In progress
-![](https://us-central1-progress-markdown.cloudfunctions.net/progress/35)
+![](https://us-central1-progress-markdown.cloudfunctions.net/progress/70)
+Finishing responsive desing...
 
 ## Demo
 
