@@ -1,5 +1,7 @@
+import { useMemo, useState } from 'react'
 import { useContextSelector } from 'use-context-selector'
 import { Header } from '../../components/Header'
+import { Pagination } from '../../components/Pagination'
 import { Summary } from '../../components/Summary'
 import { TransactionsContext } from '../../contexts/TransactionsContext'
 import { dateFormatter, priceFormatter } from '../../utils/formatter'
@@ -10,10 +12,20 @@ import {
   TransactionsTable,
 } from './styles'
 
+const PageSize = 5
+
 export function Transactions() {
   const transactions = useContextSelector(TransactionsContext, (context) => {
     return context.transactions
   })
+
+  const [currentPage, setCurrentPage] = useState(1)
+
+  const currentTransactionsData = useMemo(() => {
+    const firstPageIndex = (currentPage - 1) * PageSize
+    const lastPageIndex = firstPageIndex + PageSize
+    return transactions.slice(firstPageIndex, lastPageIndex)
+  }, [currentPage, transactions])
 
   return (
     <div>
@@ -24,7 +36,7 @@ export function Transactions() {
         <SearchForm />
         <TransactionsTable>
           <tbody>
-            {transactions.map((transaction) => (
+            {currentTransactionsData.map((transaction) => (
               <tr key={transaction.id}>
                 <td width="50%">{transaction.description}</td>
                 <td>
@@ -39,6 +51,12 @@ export function Transactions() {
             ))}
           </tbody>
         </TransactionsTable>
+        <Pagination
+          currentPage={currentPage}
+          totalCount={transactions.length}
+          pageSize={PageSize}
+          onPageChange={(page) => setCurrentPage(page)}
+        />
       </TransactionsContainer>
     </div>
   )

@@ -47,6 +47,46 @@
       "type": "outcome",
       "createdAt": "2022-10-15T00:51:50.070Z",
       "id": 6
+    },
+    {
+      "description": "Café",
+      "price": 15,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-25T00:06:10.016Z",
+      "id": 7
+    },
+    {
+      "description": "Desenvolvimento de app",
+      "price": 10000,
+      "category": "Venda",
+      "type": "income",
+      "createdAt": "2022-10-15T00:36:48.654Z",
+      "id": 8
+    },
+    {
+      "description": "Pastel",
+      "price": 5,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-15T00:50:49.358Z",
+      "id": 9
+    },
+    {
+      "description": "Iorgute de Banana",
+      "price": 4,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-15T00:51:50.070Z",
+      "id": 10
+    },
+    {
+      "description": "Café",
+      "price": 15,
+      "category": "Alimentação",
+      "type": "outcome",
+      "createdAt": "2022-10-25T00:06:10.016Z",
+      "id": 11
     }
   ]
 }
