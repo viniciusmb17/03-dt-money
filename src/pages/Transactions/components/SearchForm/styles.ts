@@ -6,7 +6,7 @@ export const SearchFormContainer = styled.form`
 
   input {
     flex: 1;
-    border-radius: 6pox;
+    border-radius: 6px;
     border: 0;
     background: ${(props) => props.theme['gray-900']};
     color: ${(props) => props.theme['gray-300']};
