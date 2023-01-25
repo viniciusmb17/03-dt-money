@@ -58,8 +58,9 @@ export function TransactionsProvider({ children }: ITransactionsProviderProps) {
       })
 
       setTransactions((state) => [response.data, ...state])
+      fetchTransactions()
     },
-    [],
+    [fetchTransactions],
   )
 
   useEffect(() => {
